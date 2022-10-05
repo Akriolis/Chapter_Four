@@ -116,9 +116,17 @@ import java.io.File
 
 /**
  * Companion objects
+ *
+ * you can name companion object or omit the name,
+ * but default name will be assigned to it is Companion
+ *
  */
 
 // also can be used as regular objects
+
+/**
+ * Object expression
+ */
 
 
 fun main(){
@@ -199,6 +207,18 @@ fun main(){
     val anotherTestUser6 = User6.newFacebookUser(1235)
     println(testUser6.nickname)
     println(anotherTestUser6.nickname)
+
+    val listener = object : A(){
+        override fun equals(other: Any?): Boolean {
+            return super.equals(other)
+        }
+
+        override fun toString(): String {
+            return super.toString()
+        }
+
+    }
+    listener.printHello()
 
 
 }
